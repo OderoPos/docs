@@ -50,7 +50,7 @@ Below you can find the OPit Lan for Windows diagram.
 </ol>
 
 <p>The client app side implementation is rather simple, only step 4 is required to be perfomed, all other steps on the client side are performed under the hood inside the library.</p>
-<h2 id='setup'>Setup</h2>
+<h2 id='opit-setup'>Setup</h2>
 <ol type="1">
   <li>Download the latest OPIT Lan for Windows <a href="https://github.com/OderoPos/opit-lan-windows/releases">release</a> and unzip the archive.</li>
   <li>Copy archive contents inside the sample project folder.</li>
