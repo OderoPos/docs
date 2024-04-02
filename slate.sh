@@ -91,6 +91,7 @@ parse_args() {
   # Source directory & target branch.
   deploy_directory=build
   deploy_branch=gh-pages
+  deploy_repo=developer-docs
 
   #if no user identity is already set in the current git environment, use this:
   default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
@@ -152,6 +153,17 @@ main() {
   fi
 
   restore_head
+}
+
+deploy_to_submodule(){
+  git submodule update --remote
+  cp -rf  $deploy_directory/. $deploy_repo/.
+  cd $deploy_repo
+  git add .
+  git commit -m "new deploy"
+  git push --quiet origin main
+  cd ..
+  git submodule update --remote
 }
 
 initial_deploy() {
@@ -244,5 +256,6 @@ elif [[ ${command} = "deploy" ]]; then
   if [[ ${no_build} != true ]]; then
     run_build
   fi
-  main "$@"
+  deploy_to_submodule
+  #main "$@"
 fi
