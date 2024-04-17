@@ -57,3 +57,24 @@ Below you can find the OPit Lan for Windows diagram.
   <li>Copy archive contents inside the sample project folder.</li>
   <li>Open the sample app project solution with Microsoft Visual Studio (make sure C++ module is installed).</li>
   <li>In Microsoft Visual Studio go to Project -> Properties -> C/C++ -> Command Line -> Additional Options -> add text: /std:c++latest
+<p align="center"><img src="../images/1-c57c7976.png" width=700></p>
+  </li>
+  <li>C/C++ -> General -> Additional Include Directories -> click on the dropdown -> Edit -> 
+in the popup press the 3 dots (...) button from the right -> Choose headers folder from the opit-desktop project -> Ok
+<p align="center"><img src="../images/2a-f3a7b050.png" width=700></p>
+<p align="center"><img src="../images/2b-e4d83d86.png" width=700></p>
+  </li>
+
+  <li>Linker -> Input -> Additional Dependencies -> click on the dropdown -> Edit -> add text: OpitDesktop.lib -> Ok
+<p align="center"><img src="../images/3a-05caa5b3.png" width=700></p>
+<p align="center"><img src="../images/3b-45cf7f51.png" width=700></p>
+</li>
+
+  <li>Linker -> General -> Additional Library Directories -> click on the dropdown -> Edit -> 
+in the popup press the 3 dots (...) button from the right -> select the folder where the OpitDesktop.lib file is located -> Ok
+<p align="center"><img src="../images/4a-d6d978e6.png" width=700></p>
+<p align="center"><img src="../images/4b-5fcb9813.png" width=700></p>
+</li>
+
+  <li>That's it! The solution should now build.</li>
+</ol>
