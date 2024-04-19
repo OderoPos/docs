@@ -156,14 +156,15 @@ main() {
 }
 
 deploy_to_submodule(){
-  git submodule update --remote
+  cd $deploy_repo
+  git pull
+  cd ..
   cp -rf  $deploy_directory/. $deploy_repo/.
   cd $deploy_repo
   git add .
   git commit -m "new deploy"
   git push --quiet origin main
   cd ..
-  git submodule update --remote
 }
 
 initial_deploy() {

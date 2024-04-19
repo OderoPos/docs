@@ -1,5 +1,5 @@
 ## Launcher 
-In order to be recognized by Token Platform and be visible in the Launcher, please add the following lines to `AndroidManifest.xml` file.
+In order to be recognized by Token Platform and be visible in the Launcher, please also add the following lines to `AndroidManifest.xml` file.
 
 > AndroidManifest.xml
 
