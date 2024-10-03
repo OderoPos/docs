@@ -44,17 +44,17 @@ maven {
 }
 ```
 
-And also in `app/build.gradle` the actual dependency should be added: `implementation 'PaymentGateway:pgw-launcher:1.0.3'`
+And also in `app/build.gradle` the actual dependency should be added: `implementation 'PaymentGateway:pgw-launcher:1.0.8'`
 
 > build.gradle
 
 ```gradle
 dependencies {
-implementation 'PaymentGateway:pgw-launcher:1.0.3'
+implementation 'PaymentGateway:pgw-launcher:1.0.8'
 }
 ```
 
-- the pgw-launcher should also add the common lib, if not please add the dependency `implementation ('PaymentGateway:common:1.0.3')`
+- the pgw-launcher should also add the common lib, if not please add the dependency `implementation ('PaymentGateway:common:1.0.8')`
 
 ### Request payment
 
@@ -94,7 +94,7 @@ paymentLauncher.launch(PaymentRequest(
             ))
 ```
 
-According to the selected payment options PGW will handle the payment and printing. The amount will be internally translated as amount/100 to cover the currency decimal; in this case 12345 will internally converted to 123,45
+According to the selected payment options `PGW` will handle the payment and printing. The amount will be internally translated as amount/100 to cover the currency decimal; in this case 12345 will internally converted to 123,45
 
 ### Handling PaymentResponse
 Check the PaymentResponse based on the payment options sent.

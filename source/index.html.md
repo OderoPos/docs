@@ -9,6 +9,7 @@ includes:
   - introduction
   - thirdpartyintegration
   - opit
+  - ecr330integration
 
   
 code_clipboard: true
