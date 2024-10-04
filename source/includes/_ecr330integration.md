@@ -99,9 +99,38 @@ EcrCommandExecutor.executeUserScreenCommand(
        }
    },
 )
-```
 
- <TODO: create a sale example> 
+//Example of a sale fiscal command
+FiscalCommand.Sale(
+    sellerInfo = SellerInfo(
+        cashierName = "John Doe",
+        posNumber = "123413",
+    ),
+    products = listOf(
+        FiscalProduct(
+            productName = "Product 1",
+            unit = "kg",
+            quantity = "1",
+            pricePerUnit = "10,5",
+            vatId = "B",
+        ),
+        FiscalProduct(
+            productName = "Product 2",
+            unit = "kg",
+            quantity = "1",
+            pricePerUnit = "15,5",
+            vatId = "B",
+        ),
+    ),
+    payments = listOf(
+        FiscalPayment(
+            paymentMethod = FiscalPayment.PaymentMethod.Card,
+            amount = "26",
+        ),
+    ),
+    cifNumber = "43511483",
+)
+```
 
 ## Sending a card payment
 

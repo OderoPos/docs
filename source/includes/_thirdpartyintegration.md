@@ -44,17 +44,15 @@ maven {
 }
 ```
 
-And also in `app/build.gradle` the actual dependency should be added: `implementation 'PaymentGateway:pgw-launcher:1.0.8'`
+And also in `app/build.gradle` the actual dependency should be added: `implementation 'PaymentGateway:pgw-launcher:1.0.9'`
 
 > build.gradle
 
 ```gradle
 dependencies {
-implementation 'PaymentGateway:pgw-launcher:1.0.8'
+implementation 'PaymentGateway:pgw-launcher:1.0.9'
 }
 ```
-
-- the pgw-launcher should also add the common lib, if not please add the dependency `implementation ('PaymentGateway:common:1.0.8')`
 
 ### Request payment
 
