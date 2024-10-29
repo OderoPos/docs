@@ -10,7 +10,6 @@ includes:
   - thirdpartyintegration
   - opit
   - ecr330integration
-
   
 code_clipboard: true
 

@@ -18,6 +18,10 @@ After that, the app will be displayed on the main screen of the ECR330 app.
 
 ## Fiscal commands
 
+libVersion = Check latest version [here](https://ro-artifactory.devtokeninc.com/ui/native/PublicLibraries/X330/integrationLibs/fiscal)
+
+**_NOTE:_**  For best compatibility `libVersion` should match ECR version installed
+
 > Dependencies
 
 ```groovy
@@ -27,15 +31,45 @@ maven {
 }
 
 //in app.gradle
-implementation 'X330.integrationLibs:fiscal:1.3.42'
+implementation 'X330.integrationLibs:fiscal:$libVersion
 ```
+
 
 Use `EcrCommandExecutor` object for sending commands to the ECR and receiving the result.
 
 The fiscal commands are sent to the ECR using the `executeFiscalCommand` method. The result can be received
- as a `Flow` or if you want to receiveas a `EcrCommandResultListener`.
+as a `Flow` or if you want to receive as a `EcrCommandResultListener`.
 
 The user screen commands follow the same `flow`, `listener` pattern.
+
+Type of fiscal commands
+
+`SetDateTime`  
+`SetCompanyData`  
+`GetCompanyData`  
+`SetVATRates`  
+`GetVATRates`  
+`Fiscalise`  
+`InitElectronicJournal`  
+`TechnicalReport`  
+`ZReport`  
+`XReport`  
+`InitJournal`  
+`Journal`  
+`JournalExport`  
+`XJournal`  
+`CustomerData`  
+`PeriodicReport`  
+    - `ByDate`  
+    - `ByZ`  
+`XMLReport`  
+`GetDailyTotals`  
+`GetStatus`  
+`GetSoftwareVersion`  
+`LoadProfile`  
+`ResetFiscalMemory`  
+`Sale`  
+`CashOperation`  
 
 > Fiscal commands
 
